@@ -1,4 +1,4 @@
-function 10by10{
+function 10by10 {
 	var array = [];
 	for(var i=0;i<10;i++){
 		for(var j=0;j<10;j++){
