@@ -29,9 +29,9 @@
 // Added pushFront function to the prototype of the Array object
 Array.prototype.pushFront = function(value) {
 	for(var i = this.length; i>0; i--){
-		array[i] = array[i-1];
+		this[i] = this[i-1];
 	}
-	array[0] = value;
+	this[0] = value;
 }
 
 // Test cases
