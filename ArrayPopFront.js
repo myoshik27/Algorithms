@@ -1,4 +1,4 @@
-// given an array, remove and return teh value at the beginning of the array. You may use the .pop() function
+// given an array, remove and return the value at the beginning of the array. You may use the .pop() function
 
 function popFront(array) {
 	if (!Array.isArray(array)) {
