@@ -1,6 +1,6 @@
 // Given an array, an index, and an additional value, insert the value into the array at the given index.
 
-
+/*
 function insertAt(array, index1, value) {
 	if (!(Array.isArray(array))) {
 		throw "First Parameter is not an array";
@@ -40,3 +40,29 @@ try {
 array3 = [];
 insertAt(array3,1);
 console.log(array3);
+
+*/
+
+// adding insertAt function to Array prototype
+
+Array.prototype.insertAt = function(index, value) {
+	index = parseInt(Math.floor(index));
+
+	if (index<0) {
+		index = 0;
+	} else if (index > this.length || Number.isNaN(index)){
+		index = this.length;  
+	}
+
+	for (i=this.length; i>index; i--) {
+		this[i] = this[i-1];
+	}
+	this[index] = value;
+}
+
+// test cases
+
+// index is NaN and value is undefined
+array = [0,1,2];
+array.insertAt("A")
+console.log(array)
