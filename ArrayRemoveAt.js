@@ -31,7 +31,6 @@ console.log(array);
 console.log(removedValue);
 
 //removing at an index that is not a number
-
 array = [0,1,2];
 removedValue = array.removeAt("A");
 console.log(array);
