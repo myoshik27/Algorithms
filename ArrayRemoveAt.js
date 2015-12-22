@@ -3,7 +3,7 @@
 Array.prototype.removeAt = function(index) {
 	index = parseInt(Math.floor(index));
 	if (Number.isNaN(index)){
-		return NaN;
+		return undefined;
 	}
 	var temp = this[index];
 
@@ -17,7 +17,22 @@ Array.prototype.removeAt = function(index) {
 }
 
 // test cases
+
+//successful case
 var array = [0,1,2];
-var removedValue = array.removeAt(4);
+var removedValue = array.removeAt(0);
+console.log(array);
+console.log(removedValue);
+
+//removing at an index that is not an integer and outside the array
+array = [0,1,2];
+removedValue = array.removeAt(4.4);
+console.log(array);
+console.log(removedValue);
+
+//removing at an index that is not a number
+
+array = [0,1,2];
+removedValue = array.removeAt("A");
 console.log(array);
 console.log(removedValue);
