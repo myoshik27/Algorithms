@@ -12,21 +12,23 @@ Optionally, add these advanced features:
  
 function rotateArr(arr, shiftBy) {
 
+	// eliminate uncecessary shifting
 	var shift = Math.floor(shiftBy) % arr.length;
 
+	// early return
 	if (arr.length <= 1 || shift === 0) {
 		console.log("array is one or less or shiftby is 0")
 		return
 	}
 
+	// account for negative numbers
 	if (shift < 0) {
 		shift = arr.length + shift
 	}
 
-	if (arr.length % shift === 0) {
-		var marker = 0;
-	}
-
+	// to keep track of repeating
+	var marker = 0;
+ 
 	var counter = 0;
 	var current_index = 0;
 	var current_val = arr[current_index];
@@ -60,8 +62,8 @@ function rotateArr(arr, shiftBy) {
 	}
 }
 
-var array = [1,2,3,4,5,6];
-var shift = 4;
+var array = [0,1,2,3,4,5,6,7,8,9,10,11];
+var shift =  8;
 
 rotateArr(array,shift);
 console.log(array)
