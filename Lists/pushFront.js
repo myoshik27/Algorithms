@@ -1,6 +1,5 @@
 // given a value add the new node to the front of the list
-
-function linkedList() {
+function singlyLinkedList() {
 	this.head = null;
 
 }
@@ -10,7 +9,7 @@ function Node(value) {
 	this.next = null;
 }
 
-linkedList.prototype.add = function(value) {
+singlyLinkedList.prototype.add = function(value) {
 
 	var node = new Node(value);
 	var currentNode = this.head;
@@ -27,13 +26,13 @@ linkedList.prototype.add = function(value) {
 	return node
 }
 
-linkedList.prototype.pushFront = function(value) {
+singlyLinkedList.prototype.pushFront = function(value) {
 	var newNode = new Node(value);
 	newNode.next = this.head;
 	this.head = newNode;
 }
 
-var list = new linkedList();
+var list = new singlyLinkedList();
 
 list.add(1);
 list.add(2);
