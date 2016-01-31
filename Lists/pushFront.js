@@ -1,7 +1,6 @@
 // given a value add the new node to the front of the list
 function singlyLinkedList() {
 	this.head = null;
-
 }
 
 function Node(value) {
