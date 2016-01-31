@@ -1,6 +1,6 @@
 /*
 
-Implement the funciton rotateArr(arr,shiftBy) that accepts an array and an offsnumberet. The function should shift the arr values by that amount. Values that shift off the array's end should "wrap around" to appear on the array's other side, so that no data is lost. Assume that arr is always an array and that shiftBy is always a whole number
+Implement the function rotateArr(arr,shiftBy) that accepts an array and an offset. The function should shift the arr values by that amount. Values that shift off the array's end should "wrap around" to appear on the array's other side, so that no data is lost. Assume that arr is always an array and that shiftBy is always a whole number
 
 Optionally, add these advanced features:
 
@@ -26,15 +26,15 @@ function rotateArr(arr, shiftBy) {
 		shift = arr.length + shift
 	}
 
-	// to keep track of repeating
+	// to keep track of cycling
 	var marker = 0;
- 
-	var counter = 0;
+
 	var current_index = 0;
 	var current_val = arr[current_index];
-	while (counter < arr.length) {
-		console.log("========= iteration " + (counter + 1) + " =========");
+	for (var i=0; i < arr.length; i++) {
+		console.log("========= iteration " + (i + 1) + " =========");
 		console.log(arr);
+		console.log("marker: ", marker);
 		console.log("current_index: ", current_index);
 		console.log("current_val: ", current_val);
 		console.log("next_index:", (current_index + shift) % arr.length);
@@ -42,9 +42,11 @@ function rotateArr(arr, shiftBy) {
 
 		var next_index = (current_index + shift) % arr.length;
 		var next_val = arr[next_index];
+
 		if (next_index == marker) {
 			next_val = arr[next_index + 1];
 		}
+
 		arr[next_index] = current_val;
 		current_val = next_val;
 		current_index = next_index;
@@ -57,13 +59,14 @@ function rotateArr(arr, shiftBy) {
 
 		console.log(arr)
 		console.log("")
-
-		counter++;
 	}
 }
 
+var array = [0, 1, 2, 3];
+var shift = 2;
+
 var array = [0,1,2,3,4,5,6,7,8,9,10,11];
-var shift =  8;
+var shift = 1 ;
 
 rotateArr(array,shift);
-console.log(array)
+console.log(array);
