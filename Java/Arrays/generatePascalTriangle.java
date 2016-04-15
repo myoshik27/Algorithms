@@ -30,3 +30,10 @@ public class Solution {
         return triangle;
     }
 }
+
+/*
+
+Tested at https://leetcode.com/problems/pascals-triangle/
+Completed with O(n^2) time complexity and O(n) space complexity
+
+*/
