@@ -40,3 +40,10 @@ public class Solution {
         return head;
     }
 }
+
+/*
+
+Tested at https://leetcode.com/problems/rotate-list/
+Completed with O(n) time complexity and O(1) space complexity
+
+*/
