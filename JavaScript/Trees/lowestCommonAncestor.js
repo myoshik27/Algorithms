@@ -41,6 +41,12 @@ var lowestCommonAncestor = function(root, p, q) {
 };
 
 /*
+Description
+1. Traverse the Tree from the bottom to the top
+2. if p or q is found return it to the parent node
+3. Parent will check if p or q are found on the left and right side of itself respectively
+4. If this is true, parent is lowest common ancestor
+5. If this is false, p or q will be passed up to the parent
 
 Tested at https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 Completed with O(n) time complexity and O(1) space complexity
